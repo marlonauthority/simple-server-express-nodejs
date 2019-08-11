@@ -50,8 +50,7 @@ server.get("/users", (req, res) => {
 
 // Show
 server.get("/users/:index", insertVariableInRequest, (req, res) => {
-  const posicaoIndex = req.params.index;
-  return res.json(users[posicaoIndex]);
+  return res.json(req.user);
 });
 
 // Create
